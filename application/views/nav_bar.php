@@ -8,15 +8,15 @@
           <div class="navbar-inner">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
             <div id="header"><div class="logo"></div></div>
-            <a href="<?=site_url('home/index'); ?>" class="brand" style="color: #32b0fc;" >UZMANLK ALANI VERİTABANI SİSTEMİ</a>
+            <a href="<?=site_url('home/index'); ?>" class="brand" style="color: ;" >UZMANLIK ALANI VERİTABANI SİSTEMİ</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="<?=site_url('home/mezun'); ?>"class="navbar-link">Anasayfa</a></li>
+                <li><a href="<?=site_url('home/index'); ?>"class="navbar-link">Anasayfa</a></li>
                 <li><a href="<?=site_url('home/about'); ?>" class="navbar-link">Hakkımızda</a></li>
                 <li><a href="<?=site_url('home/contact'); ?>" class="navbar-link">İletişim</a></li>
                 <? if ($this->session->userdata('logged_in') == FALSE): ?>
-									<li><a href="<?=site_url('home/register'); ?>" class="navbar-link">Kayıt Ol</a></li>
+									<!-- <li><a href="<?=site_url('home/register'); ?>" class="navbar-link">Kayıt Ol</a></li> -->
 									<li><a href="<?=site_url('login'); ?>" class="navbar-link">Akademisyen Girişi</a></li>
 								<? else: ?>
 									<li class="dropdown">

@@ -6,7 +6,7 @@
 
 body {
 	min-height: 100%;
-	background: #f4f7fc url('img/body-bg.jpg');
+	background: #E0E0E0  ;
 	color: #555555;
 	text-rendering: optimizelegibility;
 }
@@ -55,7 +55,7 @@ body {
 #header .logo {
 	width: 75px;
 	height: 25px;
-	background: url('img/19-normal-32x32.png') no-repeat center 5px;
+	background: url('img/ondokuzmayislogo.png') no-repeat center 5px;
 	display: block;
 	float: left;
 	margin: 1px 23px 1px 7px;
