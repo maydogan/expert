@@ -1,4 +1,6 @@
 <?php if (!defined('BASEPATH')) die();
+
+
 class Home extends Main_Controller {
 
    public function index()
@@ -40,6 +42,11 @@ class Home extends Main_Controller {
 	{
 		$data['main_content'] = 'register';
       $this->load->view('template', $data);
-    }
+    }		
+    
+	
+		
+}	
    
-}
+
+?>

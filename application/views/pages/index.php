@@ -114,21 +114,21 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="item">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/examples/slide-01.jpg" alt="">
+                    <img src="../assets/image/2.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>First Thumbnail label</h4>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     </div>
                   </div>
                   <div class="item active">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/examples/slide-01.jpg" alt="">
+                    <img src="../assets/image/3.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>Second Thumbnail label</h4>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/examples/slide-01.jpg" alt="">
+                    <img src="../assets/image/4.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>Third Thumbnail label</h4>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -139,17 +139,16 @@
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
               </div>
               
-         <h4 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ALANI VEYA UZMAN ADINI GİRİNİZ</h4><br>
-         <form class="form-search" align=center>
-          <div class="input-append">
-           <input type="text" class="span1 search-query">
-           <button type="submit" class="btn btn-large btn-success">Uzman Ara</button>
-          </div>
-           <div class="input-prepend">
-           <button type="submit" class="btn btn-large btn-success">Uzmanlık Alanı Ara</button>
-            <input type="text" class="span2 search-query">
-          </div>
-    </form>
+         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ALANINI GİRİNİZ</h5><br>
+         <form action=<?php echo site_url(). '/search_expert/result'; ?> class="navbar-form align=center" method= "post">
+           <input name="name" type="text" class="span3 search-query" placeholder="Search"><br><br>
+           <button type="submit" value="submit" class=" spn1btn btn-large btn-success">Ara</button>
+         </form>
+         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ADINI GİRİNİZ</h5><br>
+         <form class="navbar-form align=center">
+           <input type="text" class="span3 search-query" placeholder="Search"><br><br>
+           <button type="submit" class=" spn1btn btn-large btn-success">Ara</button>
+        </form>
 <br>
         
       </div>
@@ -157,29 +156,28 @@
       <hr>
 
       <!-- Example row of columns -->
-      <div class="row-fluid">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details »</a></p>
+      <div class="row-fluid" align= center>
+        <div class="span4"  >
+          <h3>Bizden Haberdar Olun!!</h3>
+          <p>Email adresinizle sistemimize kayıt yaptırarak uzmanlarımızı takip edebilirsiniz.. </p>
+          <p><a class="btn" href="#">Devamını Oku»</a></p>
         </div>
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details »</a></p>
+          <h3>OMU Duyurular</h3>
+          <p> Sitemiz yenilendi, Omu uzmanlık alanı db sistemi açıldı..</p>
+          <p><a class="btn" href="#">Devamını Oku »</a></p>
        </div>
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn" href="#">View details »</a></p>
+           <h3>Bağlantılı Sayfalar</h3>
+							<p><a class="url" href="http://ce.omu.edu.tr/" title="OMU Ceng" target="_blank">OMU Ceng</a></p>
+							<p><a class="url" href="http://www.omuradyo.com/" title="Ondokuz Mayıs Üniversitesi" target="_blank">Omü Radyo</a></p>
+          <p><a class="btn" href="#">Devamını Oku »</a></p>
         </div>
       </div>
 
       <hr>
 
-      <div class="footer">
-        <p>© Company 2013</p>
-      </div>
+     
 
     </div> <!-- /container -->
 

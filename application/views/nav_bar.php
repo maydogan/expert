@@ -105,7 +105,19 @@
         	<div class="span10">
 			<h3 class="muted">Uzmanlık Alanı Veritabanı Sistemi</h3>
 		</div>
-		<div class="span2">
+		
+	</div>
+	<div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="home">Anasayfa</a></li>
+                <li><a href="about">Hakkımızda</a></li>
+                <li><a href="contact">İletişim</a></li>
+               <li><a href="help">Yardım</a></li>
+                 <!--<li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>-->
+      
 			<? if ($this->session->userdata('logged_in') == FALSE): ?>
 <!-- <li><a href="<?=site_url('home/register'); ?>" class="navbar-link">Kayıt Ol</a></li> -->
 <li><a href="<?=site_url('login'); ?>" class="navbar-link">Akademisyen Girişi</a></li>
@@ -127,18 +139,7 @@ Profiline hoşgeldin <? echo $this->session->userdata('username') ?> <b class="c
 <? endif; ?>
 </li>
 <? endif; ?>
-		</div>
-	</div>
-	<div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active"><a href="home">Anasayfa</a></li>
-                <li><a href="about">Hakkımızda</a></li>
-                <li><a href="contact">İletişim</a></li>
-               <li><a href="#">Yardım</a></li>
-                 <!--<li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>-->
+	
               </ul>
             </div>
           </div>
