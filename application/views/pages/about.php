@@ -3,7 +3,7 @@
       body {
         padding-top: 15px;
         padding-bottom: 40px;
-        background-color: #E8E8E8;
+        background-color: #f5f5f5;
       }
 
       .form-signin {
