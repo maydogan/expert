@@ -1,36 +1,118 @@
-<link href="<?php echo base_url('assets/css/iletisim-base.css'); ?>" media="screen" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_url('assets/css/iletisim-about.css'); ?>" media="screen" rel="stylesheet" type="text/css" />
+	
+<!DOCTYPE html>
+<html lang="en"
+  <head>
+    <meta charset="utf-8">
+    <title>Carousel Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<style type="text/css">
+      body {
+        padding-top: 15px;
+        padding-bottom: 40px;
+        background-color: ;
+      }
 
-<div class="box-top">
-	<h2>İletişim</h2>
-</div>
-<div id="about-content">
-	<h3>Lütfen gönderdiğiniz mail&rsquo;in türünü belirtiniz</h3>
-	<form id="contact-form" autocomplete="off" method="post">
-			<input type="text" class="textfield" id="name" name="name" title="isim ve soyisim" value=""/>
-			<input type="text" class="textfield" id="email" name="email" title="email adres" value="" />
-			<input type="text" class="textfield" id="phone" name="phone" title="telefon numarası" value="" />
-			<select class="select" class="textfield" id="company-name" name="subject" title="konu türünü seçiniz...">
-				<option value="0" selected>konu türünü seçiniz...</option>
-				<option value="offer">Öneri</option>
-				<option value="complaint">Şikayet</option>
-				<option value="support">Yardım</option>
-				<option value="other">Diğer</option>
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+
+
+
+		
+
+
+    <meta charset="utf-8">
+    <title>Carousel Template · Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<style type="text/css">
+      body {
+        padding-top: 15px;
+        padding-bottom: 40px;
+        background-color: ;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+
+
+<form class="well span8"  >
+  <div class="row">
+		<div class="span3 ">
+			<label>İsim:</label>
+			<input class="span3" placeholder="Your First Name" type="text">
+			<label>Soyisim:</label>
+			<input class="span3" placeholder="Your Last Name" type="text">
+			<label>Email Adresi:</label>
+			<input class="span3" placeholder="Your email address" type="text">
+          	<label>Konu</label>
+			<select id="subject" name="subject" class="span3">
+				<option value="na" selected="">Seçiniz:</option>
+				<option value="service">Genel Kullanıcı Servisi</option>
+				<option value="suggestions">Öneriler</option>
+				<option value="product">Ürün Desteği</option>
 			</select>
-		<textarea type="text" class="textfield" id="message" name="message" title="mesajınız" /></textarea>
-		<button type="submit" class="contact-submit btnlar blue-45"><span>Gönder</span></button>
-	</form>
-</div>
-<div style="margin-right:100px;" id="about-sidebar">
-	<h3>İletişim Bilgileri</h3>
-	<div class="box inset-box pad clearfix">
-		<strong>Genel Sorular</strong><br />
-		<a href="mailto:web@bil.omu.edu.tr">web@bil.omu.edu.tr</a>
-		<hr />
-		<strong>Yardım için</strong><br />
-		<a href="mailto:destek@bil.omu.edu.tr">destek@bil.omu.edu.tr</a>
-		<hr />
-		<strong>Telefon</strong><br />
-		(0362) 319 19 19 -Santral
+		</div>
+		<div class="span5">
+			<label>Mesaj</label>
+			<textarea  name="message" id="message" class="input-xlarge span5 left: 10px;" rows="10"></textarea>
+		</div>
+	
+		<button type="submit" class="btn btn-primary pull-right">Gönder</button>
 	</div>
-</div>
+</form>
+
+
+
+
+

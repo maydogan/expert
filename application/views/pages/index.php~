@@ -101,10 +101,7 @@
 
     <div class="container">
 
-      <div class="masthead">
-        
-        
-      </div>
+
 
       <!-- Jumbotron -->
       <div class="jumbotron">
@@ -117,62 +114,110 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="item">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/examples/slide-01.jpg" alt="">
+                    <img src="../assets/image/2.jpg" alt="">
                     <div class="carousel-caption">
-                      <h4>First Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4></h4>
+                      <p>Çeşitli Uzmanlık Alanları İle İlgili Makalelere Ulaşabilirsiniz...</p>
                     </div>
                   </div>
                   <div class="item active">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/examples/slide-01.jpg" alt="">
+                    <img src="../assets/image/3.jpg" alt="">
                     <div class="carousel-caption">
-                      <h4>Second Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4></h4>
+                      <p>Üniversitemizde Bulunan Akademisyenlerin Uzmanlık Alanlarını Öğrenebilirsiniz... </p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="http://twitter.github.com/bootstrap/assets/img/examples/slide-01.jpg" alt="">
+                    <img src="../assets/image/4.jpg" alt="">
                     <div class="carousel-caption">
-                      <h4>Third Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4></h4>
+                      <p>Çeşitli Uzmanlık Alanları İle İlgili Makalelere Ulaşabilirsiniz...</p>
                     </div>
                   </div>
                 </div>
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
               </div>
-
-        <h1>Marketing stuff!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="#">Get started today</a>
+              
+         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLAR BURADA!</h5><br>
+         <form action=<?php echo site_url(). '/search_expert/result'; ?> class="navbar-form align=center" method= "post">
+           <input name="name" type="text" class="span3 search-query" placeholder="Search"><br><br>
+           <button type="submit" value="submit" class=" spn1btn btn-large btn-success">Ara</button><br><br>
+         </form>
+         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ALANLARI BURADA!</h5><br>
+         <form class="navbar-form align=center">
+           <input type="text" class="span3 search-query" placeholder="Search"><br><br>
+           <button type="submit" class=" spn1btn btn-large btn-success">Ara</button>
+        </form>
+<br>
+        
       </div>
 
       <hr>
 
       <!-- Example row of columns -->
-      <div class="row-fluid">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details »</a></p>
+      <div class="row-fluid" align= center> 
+        <div class="span4"  >
+          <h3>Bizden Haberdar Olun!!</h3>
+          <p> Sadece mail adresinizi ve ilginizi çeken konuları tikleyerek uzmanlarımızı takip edebilirsiniz</p>
+         <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Aramıza katıl</a> 
+<div id="betaModal" class="modal hide fade">
+    <div class="modal-header">
+            <button class="close" data-dismiss="modal">×</button>
+            <h3>Bizden Haberdar Ol..</h3>
+    </div>
+<div class="modal-body">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="span6">
+            <div class="logowrapper">
+                <img class="logoicon" src="" alt="App Logo"/>
+            </div>
+            </div>
+            <div class="span6">
+				<?php echo validation_errors('<p class="error">'); ?>
+                <?php echo form_open("home/register"); ?>
+                <form class="form-horizontal">
+                  
+                     <p class="help-block">
+                       <label for="email">Email Adresi</label>
+                       <input type="text" id="email" name="email" value="<?php echo set_value('email'); ?>" />
+                    
+                    <p class="help-block">İlgi Alanı</p>
+                    <div class="input-prepend">
+                        <span class="add-on">@</span><input class="prependedInput" size="16" type="email">
+                    </div>
+                  	<hr>
+                    <div class="help-block">
+                        <button type="submit" class="btn btn-large btn-info">İstek Gönder</button>
+                    </div>
+                    <?php echo form_close(); ?>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal-footer">
+        <p><i>Lastest Update on October 2nd, 2012</i></p>
+    </div>
+</div>
         </div>
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details »</a></p>
+          <h3>OMU Duyurular</h3>
+          <p> Sitemiz yenilendi, Omu uzmanlık alanı db sistemi açıldı..</p>
+          <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
        </div>
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn" href="#">View details »</a></p>
+           <h3>Bağlantılı Sayfalar</h3>
+							<p><a class="url" href="http://ce.omu.edu.tr/" title="OMU Ceng" target="_blank">OMU Ceng</a></p>
+							<p><a class="url" href="http://www.omuradyo.com/" title="Ondokuz Mayıs Üniversitesi" target="_blank">Omü Radyo</a></p>
+          <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
         </div>
       </div>
 
       <hr>
 
-      <div class="footer">
-        <p>© Company 2013</p>
-      </div>
+     
 
     </div> <!-- /container -->
 

@@ -40,13 +40,13 @@ class Alumni_model extends CI_Model
 	 	return $users;
 	}
 	
-	public function add_user($email, $password)
+	public function add_mail($email)
 	{
-		$query = $this->db->get_where('users', array('email' => $email));
+		$query = $this->db->get_where('mails', array('email' => $email));
 		if($query->num_rows == 1){
 			return FALSE;
 		}
-		$this->db->insert('users', array('email' => $email, 'password' => md5($password))); 
+		$this->db->insert('mails', array('email' => $email)); 
 		return TRUE;
 	}
 	

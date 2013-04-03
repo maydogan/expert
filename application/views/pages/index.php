@@ -116,22 +116,22 @@
                   <div class="item">
                     <img src="../assets/image/2.jpg" alt="">
                     <div class="carousel-caption">
-                      <h4>First Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4></h4>
+                      <p>Çeşitli Uzmanlık Alanları İle İlgili Makalelere Ulaşabilirsiniz...</p>
                     </div>
                   </div>
                   <div class="item active">
                     <img src="../assets/image/3.jpg" alt="">
                     <div class="carousel-caption">
-                      <h4>Second Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4></h4>
+                      <p>Üniversitemizde Bulunan Akademisyenlerin Uzmanlık Alanlarını Öğrenebilirsiniz... </p>
                     </div>
                   </div>
                   <div class="item">
                     <img src="../assets/image/4.jpg" alt="">
                     <div class="carousel-caption">
-                      <h4>Third Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4></h4>
+                      <p>Çeşitli Uzmanlık Alanları İle İlgili Makalelere Ulaşabilirsiniz...</p>
                     </div>
                   </div>
                 </div>
@@ -139,12 +139,12 @@
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
               </div>
               
-         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ALANINI GİRİNİZ</h5><br>
+         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLAR BURADA!</h5><br>
          <form action=<?php echo site_url(). '/search_expert/result'; ?> class="navbar-form align=center" method= "post">
            <input name="name" type="text" class="span3 search-query" placeholder="Search"><br><br>
-           <button type="submit" value="submit" class=" spn1btn btn-large btn-success">Ara</button>
+           <button type="submit" value="submit" class=" spn1btn btn-large btn-success">Ara</button><br><br>
          </form>
-         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ADINI GİRİNİZ</h5><br>
+         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ALANLARI BURADA!</h5><br>
          <form class="navbar-form align=center">
            <input type="text" class="span3 search-query" placeholder="Search"><br><br>
            <button type="submit" class=" spn1btn btn-large btn-success">Ara</button>
@@ -156,22 +156,62 @@
       <hr>
 
       <!-- Example row of columns -->
-      <div class="row-fluid" align= center>
+      <div class="row-fluid" align= center> 
         <div class="span4"  >
           <h3>Bizden Haberdar Olun!!</h3>
-          <p>Email adresinizle sistemimize kayıt yaptırarak uzmanlarımızı takip edebilirsiniz.. </p>
-          <p><a class="btn" href="#">Devamını Oku»</a></p>
+          <p> Sadece mail adresinizi ve ilginizi çeken konuları tikleyerek uzmanlarımızı takip edebilirsiniz</p>
+         <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Aramıza katıl</a> 
+<div id="betaModal" class="modal hide fade">
+    <div class="modal-header">
+            <button class="close" data-dismiss="modal">×</button>
+            <h3>Bizden Haberdar Ol..</h3>
+    </div>
+<div class="modal-body">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="span6">
+            <div class="logowrapper">
+                <img class="logoicon" src="" alt="App Logo"/>
+            </div>
+            </div>
+            <div class="span6">
+				<?php echo validation_errors('<p class="error">'); ?>
+                <?php echo form_open("home/register"); ?>
+                <form class="form-horizontal">
+                  
+                     <p class="help-block">
+                       <label for="email">Email Adresi</label>
+                       <input type="text" id="email" name="email" value="<?php echo set_value('email'); ?>" />
+                    
+                    <p class="help-block">İlgi Alanı</p>
+                    <div class="input-prepend">
+                        <span class="add-on">@</span><input class="prependedInput" size="16" type="email">
+                    </div>
+                  	<hr>
+                    <div class="help-block">
+                        <button type="submit" class="btn btn-large btn-info">İstek Gönder</button>
+                    </div>
+                    <?php echo form_close(); ?>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal-footer">
+        <p><i>Lastest Update on October 2nd, 2012</i></p>
+    </div>
+</div>
         </div>
         <div class="span4">
           <h3>OMU Duyurular</h3>
           <p> Sitemiz yenilendi, Omu uzmanlık alanı db sistemi açıldı..</p>
-          <p><a class="btn" href="#">Devamını Oku »</a></p>
+          <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
        </div>
         <div class="span4">
            <h3>Bağlantılı Sayfalar</h3>
 							<p><a class="url" href="http://ce.omu.edu.tr/" title="OMU Ceng" target="_blank">OMU Ceng</a></p>
 							<p><a class="url" href="http://www.omuradyo.com/" title="Ondokuz Mayıs Üniversitesi" target="_blank">Omü Radyo</a></p>
-          <p><a class="btn" href="#">Devamını Oku »</a></p>
+          <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
         </div>
       </div>
 

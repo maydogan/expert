@@ -9,7 +9,7 @@ Class Search_expert Extends CI_Controller
        
    public function index()
 	{
-			$data['main_content'] = 'search_expert_result_view';
+			$data['main_content'] = '';
       $this->load->view('template', $data);
 	}
 	
@@ -21,14 +21,18 @@ Class Search_expert Extends CI_Controller
        
         if(empty($name))  
         {  
-            $this->load->view('pages/hata_view');  
+     
+            $data['main_content'] = 'pages/hata_view'; 
+            $this->load->view('template', $data);
+            
         }  
         else  
         {  
          
             $this->load->model('search_model');    
             $data['results'] = $this->search_model->get_result($name);  
-            $this->load->view('pages/search_expert',$data);              
+            $data['main_content'] = 'search_expert'; 
+            $this->load->view('template', $data);            
         }  
     }  
 }

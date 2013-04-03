@@ -38,14 +38,45 @@ class Home extends Main_Controller {
       $this->load->view('template', $data);
 	}
 	
+	public function join_us()
+	{
+		$data['main_content'] = 'join_us';
+      $this->load->view('template', $data);
+    }	
+    
+    public function help()
+	{
+			$data['main_content'] = 'help';
+      $this->load->view('template', $data);
+	}
+	public function thank()
+	{
+			$data['main_content'] = 'thank';
+      $this->load->view('template', $data);
+	}		
+	
+	
 	public function register()
 	{
-		$data['main_content'] = 'register';
-      $this->load->view('template', $data);
-    }		
-    
-	
-		
+
+		$this->load->library('form_validation');
+         // field name, error message, validation rules
+        $this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
+
+
+        if($this->form_validation->run() == FALSE)
+       {
+           $data['main_content'] = 'contact';
+           $this->load->view('template', $data);
+       }
+      else
+      {
+          $this->user_model->add_mail();
+          $data['main_content'] = 'thank';
+          $this->load->view('template', $data);
+  }
+ }
+    		
 }	
    
 

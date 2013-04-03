@@ -103,7 +103,7 @@
       <div class="container">
 	<div class="row-fluid">
         	<div class="span10">
-			<h3 class="muted">Uzmanlık Alanı Veritabanı Sistemi</h3>
+			<h3  class="muted">Uzmanlık Alanı Veritabanı Sistemi</h3>
 		</div>
 		
 	</div>
@@ -111,10 +111,10 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><a href="home">Anasayfa</a></li>
-                <li><a href="about">Hakkımızda</a></li>
-                <li><a href="contact">İletişim</a></li>
-               <li><a href="help">Yardım</a></li>
+                <li class="active"><a href=<?=site_url('/'); ?>>Anasayfa</a></li>
+                <li><a href=<?=site_url('home/about'); ?>>Hakkımızda</a></li>
+                <li><a href=<?=site_url('home/contact'); ?>>İletişim</a></li>
+               <li><a href=<?=site_url('home/help'); ?>>Yardım</a></li>
                  <!--<li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>-->
       
