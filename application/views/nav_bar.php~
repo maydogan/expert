@@ -19,7 +19,7 @@
         max-width: 1000px;
       }
       .container > hr {
-        margin: 60px 0;
+        margin: 0px 0;
       }
 
       /* Main marketing message and sign up button */
@@ -102,10 +102,22 @@
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
 	<div class="row-fluid">
-        	<div class="span9">
-			<h3 class="muted">Project name</h3>
+        	<div class="span10">
+			<h3  class="muted">Uzmanlık Alanı Veritabanı Sistemi</h3>
 		</div>
-		<div class="span3">
+		
+	</div>
+	<div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href=<?=site_url('/'); ?>>Anasayfa</a></li>
+                <li><a href=<?=site_url('home/about'); ?>>Hakkımızda</a></li>
+                <li><a href=<?=site_url('home/contact'); ?>>İletişim</a></li>
+               <li><a href=<?=site_url('home/help'); ?>>Yardım</a></li>
+                 <!--<li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>-->
+      
 			<? if ($this->session->userdata('logged_in') == FALSE): ?>
 <!-- <li><a href="<?=site_url('home/register'); ?>" class="navbar-link">Kayıt Ol</a></li> -->
 <li><a href="<?=site_url('login'); ?>" class="navbar-link">Akademisyen Girişi</a></li>
@@ -127,18 +139,7 @@ Profiline hoşgeldin <? echo $this->session->userdata('username') ?> <b class="c
 <? endif; ?>
 </li>
 <? endif; ?>
-		</div>
-	</div>
-	<div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Downloads</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+	
               </ul>
             </div>
           </div>

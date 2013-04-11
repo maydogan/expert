@@ -24,7 +24,7 @@
 
       /* Main marketing message and sign up button */
       .jumbotron {
-        margin: 80px 0;
+        margin: 0px 0;
         text-align: center;
       }
       .jumbotron h1 {
@@ -106,7 +106,7 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
 
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide span7">
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class=""></li>
                   <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
@@ -142,7 +142,7 @@
          <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLAR BURADA!</h5><br>
          <form action=<?php echo site_url(). '/search_expert/result'; ?> class="navbar-form align=center" method= "post">
            <input name="name" type="text" class="span3 search-query" placeholder="Search"><br><br>
-           <button type="submit" value="submit" class=" spn1btn btn-large btn-success">Ara</button><br><br>
+           <button type="submit" value="submit" class=" spn1btn btn-large btn-success">Ara</button>
          </form>
          <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ALANLARI BURADA!</h5><br>
          <form class="navbar-form align=center">

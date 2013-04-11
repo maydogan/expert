@@ -24,7 +24,7 @@
 
       /* Main marketing message and sign up button */
       .jumbotron {
-        margin: 80px 0;
+        margin: 0px 0;
         text-align: center;
       }
       .jumbotron h1 {
@@ -183,22 +183,28 @@
                        <label for="email">Email Adresi</label>
                        <input type="text" id="email" name="email" value="<?php echo set_value('email'); ?>" />
                     
-                    <p class="help-block">İlgi Alanı</p>
-                    <div class="input-prepend">
-                        <span class="add-on">@</span><input class="prependedInput" size="16" type="email">
-                    </div>
-                  	<hr>
-                    <div class="help-block">
-                        <button type="submit" class="btn btn-large btn-info">İstek Gönder</button>
-                    </div>
-                    <?php echo form_close(); ?>
+                     <p class="help-block">İlgi Alanı</p>
+                     <div class="input-prepend">
+                        <select class="select" name="sex" id="sex" aria-required="true"> 
+							<option value="0">Seç:</option>
+							<option value="1">Unix/Linux</option>
+							<option value="2">Network </option>
+							<option value="2">Religion</option>
+							<option value="2">Medical</option>
+							<option value="2">Artifical İntelligence</option>
+						</select>
+	                  </div>
+                      <div class="help-block">
+                         <button type="submit" class="btn btn-large btn-info">İstek Gönder</button>
+                     </div>
+                     <?php echo form_close(); ?>
                 </form>
             </div>
         </div>
     </div>
 </div>
     <div class="modal-footer">
-        <p><i>Lastest Update on October 2nd, 2012</i></p>
+        <p><i>Omu Ceng</i></p>
     </div>
 </div>
         </div>

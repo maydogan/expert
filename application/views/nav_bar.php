@@ -42,7 +42,7 @@
 
       /* Supporting marketing content */
       .marketing {
-        margin: 60px 0;
+        margin: 0px 0;
       }
       .marketing p + h4 {
         margin-top: 28px;

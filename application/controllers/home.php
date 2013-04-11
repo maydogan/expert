@@ -61,7 +61,7 @@ class Home extends Main_Controller {
 
 		$this->load->library('form_validation');
          // field name, error message, validation rules
-        $this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('email', 'email', 'required|max_length[40]|valid_email');
 
 
         if($this->form_validation->run() == FALSE)
@@ -69,12 +69,12 @@ class Home extends Main_Controller {
            $data['main_content'] = 'contact';
            $this->load->view('template', $data);
        }
-      else
-      {
-          $this->user_model->add_mail();
+       else
+       {
+          $this->alumni_model->add_mail($this->input->post('email'));
           $data['main_content'] = 'thank';
           $this->load->view('template', $data);
-  }
+       }
  }
     		
 }	
