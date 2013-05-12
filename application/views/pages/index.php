@@ -124,7 +124,7 @@
                     <img src="../assets/image/3.jpg" alt="">
                     <div class="carousel-caption">
                       <h4></h4>
-                      <p>Üniversitemizde Bulunan Akademisyenlerin Uzmanlık Alanlarını Öğrenebilirsiniz... </p>
+                      <p>Üniversitemizde Bulunan Akademisyenlerin Uzmanlık Alanlarını Öğrenebilirsinizzzzz... </p>
                     </div>
                   </div>
                   <div class="item">
