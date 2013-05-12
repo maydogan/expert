@@ -55,11 +55,11 @@
     <div class="row">
         <div class="span4">
 	    		<div class="alert alert-error">
-					<meta charset="utf-8">
-			     	<strong>Hatalı giriş!! bilgilerinizi düzenleyiniz...</strong>
-		    	</div>
-		   </div>
-		</div>
+                <a class="close" data-dismiss="alert" href="#">x</a>Hatalı giriş!
+                       </div>
+		
+        </div>
+    </div>
 	<? elseif($message == 2):?>
 	<div class="row">
         <div class="span4">

@@ -7,108 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-	<style type="text/css">
-      body {
-        padding-top: 15px;
-        padding-bottom: 40px;
-        background-color: ;
-      }
-
-      .form-signin {
-        max-width: 300px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
-
-    </style>
 
 
 
-		
-
-
-    <meta charset="utf-8">
-    <title>Carousel Template · Bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<style type="text/css">
-      body {
-        padding-top: 15px;
-        padding-bottom: 40px;
-        background-color: ;
-      }
-
-      .form-signin {
-        max-width: 300px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
-
-    </style>
-
-
-<form class="well span8"  >
+<form class="well span9"  >
   <div class="row">
-		<div class="span3 ">
+		<table>
+		<td>
+		<div class="span3">
+			<?php echo validation_errors('<p class="error">'); ?>
+			<?php echo form_open("home/add_contact"); ?>
 			<label>İsim:</label>
-			<input class="span3" placeholder="Your First Name" type="text">
+			<input class="span3" placeholder="Your First Name" type="input" name="first_name"value="<?php echo set_value('first_name'); ?>" >
 			<label>Soyisim:</label>
-			<input class="span3" placeholder="Your Last Name" type="text">
+			<input class="span3" placeholder="Your Last Name" type="input" name="last_name" value="<?php echo set_value('last_name'); ?>">
 			<label>Email Adresi:</label>
-			<input class="span3" placeholder="Your email address" type="text">
+			<input class="span3" placeholder="Your email address" type="input" name="email" value="<?php echo set_value('email'); ?>">
           	<label>Konu</label>
-			<select id="subject" name="subject" class="span3">
+			<select id="subject" name="subject" class="span3"  name="subject"value="<?php echo set_value('subject'); ?>">
 				<option value="na" selected="">Seçiniz:</option>
 				<option value="service">Genel Kullanıcı Servisi</option>
 				<option value="suggestions">Öneriler</option>
 				<option value="product">Ürün Desteği</option>
 			</select>
 		</div>
-		<div class="span5">
-			<label>Mesaj</label>
-			<textarea  name="message" id="message" class="input-xlarge span5 left: 10px;" rows="10"></textarea>
-		</div>
-	
-		<button type="submit" class="btn btn-primary pull-right">Gönder</button>
+		</td>
+		<td>
+		<div class="span6" >
+			<label style="text-align: right">Mesaj</label>
+			<textarea name="message" id="message" class="span5 pull-right" rows="12" name="message" value="<?php echo set_value('message'); ?>"></textarea>
+		</div>	
+		<button type="submit" class="btn btn-primary pull-right">Gönder</button></td>
+		<?php echo form_close(); ?>
+		</table>
 	</div>
 </form>
 

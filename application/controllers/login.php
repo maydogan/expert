@@ -21,6 +21,8 @@ class Login extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             redirect('login/login_failed');
+            
+            
         } else {
             $isuser = $this->alumni_model->is_user($this->input->post('email'), $this->input->post('password'));
             if ($isuser) {
@@ -32,7 +34,7 @@ class Login extends CI_Controller
                     'logged_in' => TRUE
                );
 							 $this->session->set_userdata($newdata);
-							 if ($utype == 2){
+							 if ($utype == 0){
 								 redirect('home/profile_expert');
 							 }
 							 else {
@@ -47,7 +49,9 @@ class Login extends CI_Controller
     
     public function login_failed()
     {
-        $this->load->view('pages/login', array('message' => 1));
+        	$data['main_content'] = 'login';
+        $data['message'] = 1;
+      	$this->load->view('template', $data);
     }
     
     public function logout()
@@ -63,6 +67,44 @@ class Login extends CI_Controller
 
         }
     }
+   
+    public function change_password()
+    {
+        $data['main_content'] = 'change_password';
+      	$this->load->view('template', $data);           
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules('email', 'Email', 'required|max_length[40]|valid_email');
+        $this->form_validation->set_rules('old_password','Old Password','trim|required|min_length[6]|max_length[8]');
+        $this->form_validation->set_rules('new_password', 'password', 'trim|min_length[6]|matches[password_confirm]');
+		$this->form_validation->set_rules('re_password', 'password confirmation', 'trim');
+
+        
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            
+             redirect('login/change_failed');
+        }
+        else
+         {
+			 
+			$this->load->model('alumni_model');
+            $this->alumni_model->change_password();
+
+                $data['main_content'] = 'change_password';
+      	        $this->load->view('template', $data);
+
+
+        }
+}
+
+      public function change_failed()
+      {
+       	$data['main_content'] = 'change_password';
+        $data['message'] = 1;
+      	$this->load->view('template', $data);
+      }
     
     private function is_logged_in()
     {

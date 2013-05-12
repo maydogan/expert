@@ -24,8 +24,8 @@
 
       /* Main marketing message and sign up button */
       .jumbotron {
-        margin: 0px 0;
-        text-align: center;
+        margin:-10px -30px;
+        text-align: left;
       }
       .jumbotron h1 {
         font-size: 100px;
@@ -78,8 +78,8 @@
         border-radius: 0 3px 3px 0;
       }
       .carousel  {
-	height: 500px;
-	width: 998px;
+	height: 100px;
+	width: 100px;
       }
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -106,7 +106,7 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
 
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide span6" align ="left">
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class=""></li>
                   <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
@@ -137,25 +137,26 @@
                 </div>
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-              </div>
-              
-         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLAR BURADA!</h5><br>
-         <form action=<?php echo site_url(). '/search_expert/result'; ?> class="navbar-form align=center" method= "post">
-           <input name="name" type="text" class="span3 search-query" placeholder="Search"><br><br>
-           <button type="submit" value="submit" class=" spn1btn btn-large btn-success">Ara</button><br><br>
-         </form>
-         <h5 align = center>ÜNİVERSİTEMİZDEN ARAMAK İSTEDİĞİNİZ UZMANLIK ALANLARI BURADA!</h5><br>
-         <form class="navbar-form align=center">
-           <input type="text" class="span3 search-query" placeholder="Search"><br><br>
-           <button type="submit" class=" spn1btn btn-large btn-success">Ara</button>
-        </form>
-<br>
-        
+              </div>          
+         
+          <h5 align = center>ARAMA YAPMAK İÇİN</h5><br>
+         <form  action= "<?php echo site_url(). '/search_expert/result';?>" class="navbar-form" method="post"align="right">
+         <select name="kategori">
+         <option value="Alan">Uzmanlık Alanına Göre</option>
+	 <option value="Uzman">Uzman Adına Göre</option>
+    	 <?php 
+    	 for($i=0;$i<count($kategori);$i++){
+        	echo "<option value='{$kategori[$i]}'>$kategori[$i]</option>";
+    		}
+    		?>
+	</select>
+	<input type="text" name="kelime"  placeholder="Bir Kelime Giriniz" /> <br>
+	<input type="Submit" name="ara" value='Ara'  class=" spn1btn btn-large btn-success" />
+	</form>
       </div>
 
       <hr>
 
-      <!-- Example row of columns -->
       <div class="row-fluid" align= center> 
         <div class="span4"  >
           <h3>Bizden Haberdar Olun!!</h3>
@@ -209,15 +210,15 @@
 </div>
         </div>
         <div class="span4">
-          <h3>OMU Duyurular</h3>
+          <h4>OMU Duyurular</h4>
           <p> Sitemiz yenilendi, Omu uzmanlık alanı db sistemi açıldı..</p>
-          <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
+          <a class="btn btn-primary " data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
        </div>
         <div class="span4">
-           <h3>Bağlantılı Sayfalar</h3>
-							<p><a class="url" href="http://ce.omu.edu.tr/" title="OMU Ceng" target="_blank">OMU Ceng</a></p>
-							<p><a class="url" href="http://www.omuradyo.com/" title="Ondokuz Mayıs Üniversitesi" target="_blank">Omü Radyo</a></p>
-          <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
+           <h4>Bağlantılı Sayfalar</h4>
+<p><a class="url" href="http://ce.omu.edu.tr/" title="OMU Ceng" target="_blank">OMU Ceng</a></p>
+<p><a class="url" href="http://www.omuradyo.com/" title="Ondokuz Mayıs Üniversitesi" target="_blank">Omü Radyo</a></p>
+          <a class="btn btn-primary " data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
         </div>
       </div>
 

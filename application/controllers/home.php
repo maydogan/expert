@@ -17,8 +17,30 @@ class Home extends Main_Controller {
 	
 	public function contact()
 	{
-			$data['main_content'] = 'contact';
-      $this->load->view('template', $data);
+	  $data['main_content'] = 'contact';
+      $this->load->view('template', $data);     
+        
+	}
+	
+	public function add_contact()
+	{
+		$this->load->library('form_validation');
+        $this->form_validation->set_rules('first_name', 'first_name', 'required|max_length[15]|valid_email');
+        $this->form_validation->set_rules('last_name', 'last_name', 'required|max_length[15]|valid_email');
+        $this->form_validation->set_rules('email', 'email', 'required|max_length[40]|valid_email');
+        $this->form_validation->set_rules('subject', 'subject', 'required|max_length[10]|valid_email');
+        $this->form_validation->set_rules('message', 'message', 'required|max_length[100]|alpha_numeric');
+        
+         if($this->form_validation->run() == FALSE)
+       {
+           $data['main_content'] = 'about';
+           $this->load->view('template', $data);
+       }
+       else
+       {
+		  $this->alumni_model->add_contact();
+		  $this->thank();
+       }
 	}
 	
 	public function profile()
