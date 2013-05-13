@@ -138,30 +138,32 @@
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
               </div>          
-         
-          <h5 align = center>ARAMA YAPMAK İÇİN</h5><br>
+	</div>
+	<div>
+         <h5 align = center>ARAMA YAPMAK İÇİN</h5><br>
          <form  action= "<?php echo site_url(). '/search_expert/result';?>" class="navbar-form" method="post"align="right">
          <select name="kategori">
-         <option value="Alan">Uzmanlık Alanına Göre</option>
-	 <option value="Uzman">Uzman Adına Göre</option>
-    	 <?php 
-    	 for($i=0;$i<count($kategori);$i++){
-        	echo "<option value='{$kategori[$i]}'>$kategori[$i]</option>";
-    		}
+			<option value="Alan">Uzmanlık Alanına Göre</option>
+			<option value="Uzman">Uzman Adına Göre</option>
+			<?php 
+			for($i=0;$i<count($kategori);$i++){
+				echo "<option value='{$kategori[$i]}'>$kategori[$i]</option>";
+				}
     		?>
-	</select>
-	<input type="text" name="kelime"  placeholder="Bir Kelime Giriniz" /> <br>
-	<input type="Submit" name="ara" value='Ara'  class=" spn1btn btn-large btn-success" />
-	</form>
-      </div>
+		 </select>
+		 <input class="navbar-form input" type="text" name="kelime"  placeholder="Bir Kelime Giriniz" /> </br>
+		 <button style = "margin-top:10px;" align=center class="btn  btn-primary" type = "submit" >Ara</button>
+		 </form>
+		 
+	</div>
 
       <hr>
 
-      <div class="row-fluid" align= center> 
+      <div  class="row-fluid " align= center> 
         <div class="span4"  >
-          <h3>Bizden Haberdar Olun!!</h3>
-          <p> Sadece mail adresinizi ve ilginizi çeken konuları tikleyerek uzmanlarımızı takip edebilirsiniz</p>
-         <a class="btn btn-primary btn-large" data-toggle="modal" href="#betaModal">Aramıza katıl</a> 
+          <h4>Bizden Haberdar Olun!!</h4>
+          <p> Sadece mail adresinizi ve ilginizi çeken konuları tikleyerek uzmanları takip edin</p>
+         <a class="btn btn-primary " data-toggle="modal" href="#betaModal">Aramıza katıl</a> 
 <div id="betaModal" class="modal hide fade">
     <div class="modal-header">
             <button class="close" data-dismiss="modal">×</button>
@@ -181,12 +183,11 @@
                 <form class="form-horizontal">
                   
                      <p class="help-block">
-                       <label for="email">Email Adresi</label>
-                       <input type="text" id="email" name="email" value="<?php echo set_value('email'); ?>" />
-                    
-                     <p class="help-block">İlgi Alanı</p>
+                       <h6 align=left >Email Adresi</h6>
+                       <input class="navbar-form input" type="text" name="email"  placeholder="email adresini giriniz" value="<?php echo set_value('email'); ?>" /> </br>                 
+                     <h6 align=left >İlgi Alanınız</h6>
                      <div class="input-prepend">
-                        <select class="select" name="sex" id="sex" aria-required="true"> 
+                        <select class="select" name="sex"  aria-required="true"> 
 							<option value="0">Seç:</option>
 							<option value="1">Unix/Linux</option>
 							<option value="2">Network </option>
@@ -221,10 +222,7 @@
           <a class="btn btn-primary " data-toggle="modal" href="#betaModal">Devamını Oku >></a> 
         </div>
       </div>
-
-      <hr>
-
-     
+<hr>
 
     </div> <!-- /container -->
 
@@ -245,6 +243,5 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
 
-  
-
-</body></html>
+</body>
+</html>

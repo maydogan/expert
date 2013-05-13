@@ -9,7 +9,7 @@ Class search_model Extends CI_Model
         $this->load->database();  
     }  
   
-    function get_result($name)  
+    function get_result_expert($name)  
     {  
      
         $name = $this->db->escape_str($name);             
@@ -18,7 +18,16 @@ Class search_model Extends CI_Model
         $this->db->like('name',$name);    
         return $this->db->get()->result();  
     }  
+
+    function get_result_professions($key_word)  
+    {  
+     
+        $name = $this->db->escape_str($key_word);             
+        $this->db->select('key_word');  
+        $this->db->from('professions');  
+        $this->db->like('key_word',$key_word);    
+        return $this->db->get()->result();  
+    } 
 }  
 
 ?>
-

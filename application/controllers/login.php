@@ -35,7 +35,7 @@ class Login extends CI_Controller
                );
 							 $this->session->set_userdata($newdata);
 							 if ($utype == 0){
-								 redirect('home/profile_expert');
+								 redirect('home/profile');
 							 }
 							 else {
 								 redirect ('home/profile');

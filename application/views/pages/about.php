@@ -3,10 +3,10 @@
     
   </head>
 
-  <body>
+  <body align=center>
 
     <div class="container" style=" position:center;">
-	<form class="well span4" style=" text-align:center;"  >
+	<form class="well span9" style=" text-align:center;"  >
 Bu servis, üniversitemizde bulunan uzmanların kendi branşları hakkında bilgi paylaşımı yapabileceği ve erişmek isteyen herkesin (sanayici, öğrenci vb. ) kişi ya da  konuya göre arama yapabilmelerine olanak sağlar.
 
   		

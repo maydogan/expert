@@ -54,11 +54,6 @@ class Home extends Main_Controller {
       $this->load->view('template', $data);
 	}
 	
-	public function mezun()
-	{
-			$data['main_content'] = 'mezun';
-      $this->load->view('template', $data);
-	}
 	
 	public function join_us()
 	{

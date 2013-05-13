@@ -1,4 +1,4 @@
-   <title>ARAMA SONUCU</title> 
+      <title>ARAMA SONUCU</title> 
   <style type="text/css">
       body {
         padding-top: 15px;
@@ -39,21 +39,45 @@
      
         <h1>ARAMA SONUCU :</h1>  
           
-        <?php  
-        $total = count($results);  
-          
-        if($total == 0)  
+    <?php
+
+    $a_kategori=$_POST['kategori'];
+      
+    //kategoriyi belirleme
+    if($a_kategori=='Uzman'){
+	$total = count($results_expert);
+     	if($total == 0)  
         {  
             echo '<p>Kayıt Bulunamadı.</p>';  
-        }  
-        else  
-        {  
-            for($i=0; $i<$total; $i++)  
+        }
+        else{
+	for($i=0; $i<$total; $i++)  
             {  
-                echo '<p>'. $results[$i]->name .'</p>';  
+                echo '<p>'. $results_expert[$i]->name .'</p>';  
+            } 
+        }
+	}
+
+    else{
+	$total = count($results_professions);
+        //bir kategoriye göre verilerin alýnýp, listelenmesi
+	if($total == 0)  
+        {  
+            echo '<p>Kayıt Bulunamadı.</p>';  
+        }
+	else{
+        for($i=0; $i<$total; $i++)  
+            {  
+                echo '<p>'. $results_professions[$i]->key_word .'</p>';  
             }  
-        }  
-        ?>  
+        }
+    }
+
+ 
+// Veritabaný baðlantýsý sonlandýrma
+mysql_close();
+?>
+ 
 
   <!-- Le javascript
     ================================================== -->
