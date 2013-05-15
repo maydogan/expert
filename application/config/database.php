@@ -48,10 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '12345';
-$db['default']['database'] = 'expert';
+$url = parse_url(getenv("mysql://adffdadf2341:adf4234@us-cdbr-east.cleardb.com/heroku_db?reconnect=true"));
+$db['default']['hostname'] = url['host'];
+$db['default']['username'] = url['user'];
+$db['default']['password'] = url['pass'];
+$db['default']['database'] = trim(url['path'], '/');
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
