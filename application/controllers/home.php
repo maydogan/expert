@@ -18,8 +18,8 @@ class Home extends Main_Controller {
 	public function contact()
 	{
 	  $data['main_content'] = 'contact';
-      $this->load->view('template', $data);     
-        
+      $this->load->view('template', $data);
+      
 	}
 	
 	public function add_contact()
@@ -39,7 +39,8 @@ class Home extends Main_Controller {
        else
        {
 		  $this->alumni_model->add_contact();
-		  $this->thank();
+		  $data['main_content'] = 'thank';
+          $this->load->view('template', $data);
        }
 	}
 	

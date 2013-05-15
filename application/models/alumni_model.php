@@ -2,6 +2,10 @@
 
 class Alumni_model extends CI_Model 
 {
+	public function __construct()
+	{
+		parent::__construct();
+	}
 	public function is_user($email, $password)
 	{
 		$query = $this->db->get_where('users', array('email' => $email, 'password' => $password));

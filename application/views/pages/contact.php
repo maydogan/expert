@@ -9,8 +9,8 @@
     
 
 
-
-<form class="well span9"  >
+<div style=" margin-left:65px;" >
+<form class="well span8"  >
   <div class="row">
 		
 		<div class="span3">
@@ -24,11 +24,12 @@
 			<input class="span3" placeholder="Your email address" type="text" name="email" value="<?php echo set_value('email'); ?>">
        <label>Konu</label>
 			<select id="subject" name="subject" class="span3"  name="subject"value="<?php echo set_value('subject'); ?>">
-				<option value="na" selected="">Seçiniz:</option>
-				<option value="service">Genel Kullanıcı Servisi</option>
-				<option value="suggestions">Öneriler</option>
-				<option value="product">Ürün Desteği</option>
+				<option value="<?php echo set_value('subject'); ?>" selected="">Seçiniz:</option>
+				<option value="<?php echo set_value('subject'); ?>">Genel Kullanıcı Servisi</option>
+				<option value="<?php echo set_value('subject'); ?>">Öneriler</option>
+				<option value="<?php echo set_value('subject'); ?>">Ürün Desteği</option>
 			</select>
+			
 	   </div>
 		
 		<div class="span5" >
@@ -38,11 +39,11 @@
 					
 	
 	</div>
-	<button align=center type="submit" class="btn btn-primary">Gönder</button>
-		<?php echo form_close(); ?>
+	<button align=center type="submit" class="btn btn-primary pull-right">Gönder</button>
+	<?php echo form_close(); ?>
 </form>
 
 
-
+</div>
 
 

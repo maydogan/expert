@@ -124,7 +124,7 @@
 <? else: ?>
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #32b0fc;">
-Profiline hoşgeldin <? echo $this->session->userdata('username') ?> <b class="caret"></b>
+Profiline hoşgeldin <? echo $this->session->userdata('email') ?> <b class="caret"></b>
 </a>
 <? if ($this->session->userdata('user_type') == 1): ?>
 <ul class="dropdown-menu">
@@ -133,7 +133,7 @@ Profiline hoşgeldin <? echo $this->session->userdata('username') ?> <b class="c
 </ul>
 <? else: ?>
 <ul class="dropdown-menu">
-<li><a href="<?=site_url('home/profile_expert'); ?>" >Profil Sayfası</a></li>
+<li><a href="<?=site_url('home/profile'); ?>" >Profil Sayfası</a></li>
 <li><a href="<?=site_url('login/logout'); ?>">Çıkış</a></li>
 </ul>
 <? endif; ?>

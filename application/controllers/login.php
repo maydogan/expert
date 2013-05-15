@@ -24,22 +24,24 @@ class Login extends CI_Controller
             
             
         } else {
-            $isuser = $this->alumni_model->is_user($this->input->post('email'), $this->input->post('password'));
-            if ($isuser) {
-            		$first_name = $this->alumni_model->get_username($this->input->post('email'), $this->input->post('password'));
-            		$utype = $this->alumni_model->get_user_type($this->input->post('email'));
+			    
+			    
+			     
+            	$hostname = '{imap.gmail.com:993/imap/ssl}';
+				$username  = $this->input->post('email');
+				$password = $this->input->post('password');
+
+				/* try to connect */
+				$inbox = imap_open($hostname, $username, $password);
+
+            if ($inbox) {
             		$newdata = array(
 					'user_type' => $utype,
-                    'username'  => $first_name,
-                    'logged_in' => TRUE
-               );
-							 $this->session->set_userdata($newdata);
-							 if ($utype == 0){
+                    'email'  => $email,
+                    'logged_in' => TRUE,);
+                                 $this->session->set_userdata($newdata);
 								 redirect('home/profile');
-							 }
-							 else {
-								 redirect ('home/profile');
-							 }
+				
                 
             } else {
                 redirect('login/login_failed');
