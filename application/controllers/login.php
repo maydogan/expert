@@ -24,7 +24,7 @@ class Login extends CI_Controller
             
             
         } else {			   			     
-            	$hostname = '{eposta.omu.edu.tr:993/imap/ssl}';
+            	$hostname = '{eposta.omu.edu.tr:993/ssl}';
 		$username  = $this->input->post('email');
 		$password = $this->input->post('password');
 
