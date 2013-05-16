@@ -50,7 +50,7 @@
         <button style="float: right; margin-top:-30px;" class="btn btn-large btn-primary" type="submit">Giriş</button>
       </form>
     <meta charset="utf-8">
-    <!-- <? if($message == 1): ?> 
+    <? if($message == 1): ?>
     <div class="row">
         <div class="span4">
 	    		<div class="alert alert-error">
@@ -67,5 +67,5 @@
 			    </div>
 		    </div>
 	</div>
-	<? endif; ?> -->
+	<? endif; ?>
 

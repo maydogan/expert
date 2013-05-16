@@ -124,7 +124,7 @@
 <? else: ?>
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #32b0fc;">
-Profiline hoşgeldin <? echo $this->session->userdata('email') ?> <b class="caret"></b>
+ Hoşgeldin <? echo $this->session->userdata('user_type') ?> <b class="caret"></b>
 </a>
 <? if ($this->session->userdata('user_type') == 1): ?>
 <ul class="dropdown-menu">

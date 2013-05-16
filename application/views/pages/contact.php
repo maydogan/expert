@@ -37,7 +37,6 @@
 			<textarea name="message" id="message" class="input-xlarge span5" rows="13"  value="<?php echo set_value('message'); ?>"></textarea>
 		</div>
 					
-	
 	</div>
 	<button align=center type="submit" class="btn btn-primary pull-right">Gönder</button>
 	<?php echo form_close(); ?>
